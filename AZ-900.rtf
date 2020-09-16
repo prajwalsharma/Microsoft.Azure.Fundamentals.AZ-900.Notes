@@ -1,5 +1,5 @@
 {\rtf1\ansi\ansicpg1252\deff0\nouicompat{\fonttbl{\f0\fnil\fcharset0 Comic Sans MS;}{\f1\fnil\fcharset0 Calibri;}}
-{\colortbl ;\red255\green0\blue0;\red156\green133\blue192;\red75\green172\blue198;}
+{\colortbl ;\red255\green0\blue0;\red156\green133\blue192;\red75\green172\blue198;\red0\green176\blue80;\red155\green0\blue211;}
 {\*\generator Riched20 10.0.18362}\viewkind4\uc1 
 \pard\sa200\sl276\slmult1\qc\cf1\b\f0\fs40\lang9 ---------------------------------\par
 AZ-900 Certification\par
@@ -262,17 +262,123 @@ EVOLUTION OF COMPUTING\par
 \tab e. You pay for a fraction of the server.\par
 \tab f. You'll overpay for the underutilized VM.\par
 \tab g. Limited by guest OS.\par
-\tab h. Multiple apps on single VM can create resource sharing conflicts.\cf3\par
-\tab\cf0\par
+\tab h. Multiple apps on single VM can create resource sharing conflicts.\par
 \par
+\cf3\b\fs32 4. What are Containers?\cf0\b0\fs22\par
+\tab a. Virtual machines running multiple containers.\par
+\tab b. \cf1\b Docker Daemon \cf0\b0 is the software thet let us run multiple containers.\par
+\tab c. Maximum utilization of the available capacity.\par
+\tab d. Share same OS so are more efficient.\par
+\tab e. Multiple apps can run side by side without resource conflicts.\par
 \par
+\cf3\b\fs32 5. What are Functions?\cf0\b0\fs22\par
+\tab a. Broke apps into small functions.\par
+\tab b. A managed VMs running managed containers.\par
+\tab c. It is known as Serverless Computing.\par
+\tab d. You upload a piece of code, then choose the amount of memory & \tab duration.\par
+\tab e. Only pay for the time code is running.\par
+\tab f. VMs only run when there is code to be executed.\par
+\tab g. Disadvantages is \cf1\b Cold Starts (server starting time)\b0\par
+\cf3\tab\cf0\par
 \par
+
+\pard\sa200\sl276\slmult1\qc\cf2\b\fs40 ---------------------------------\par
+Global Infra - Regions & Geographies\par
+---------------------------------\cf0\fs22\par
+
+\pard\sa200\sl276\slmult1\b0\par
+\cf3\b\fs32 1. What is a Region?\cf0\b0\fs22\par
+\tab a. It is a group of multiple datacentres (Availability Zones).\par
+\tab b. Azure has \cf1\b 58 Regions \cf0\b0 across \cf1\b 140 countries.\cf0\b0\par
 \par
+\cf3\b\fs32 2. What is a Geography?\cf0\b0\fs22\par
+\tab a. It is a discreet market of two or more regions that preserves\par
+\tab\tab i. \cf1\b Data Residency \cf0\b0 (All data should reside in Canada/US/India)\par
+\tab\tab ii. \cf1\b Compliance of boundaries \cf0\b0 (Country laws & guidelines)\par
+\tab b. Geographies are:\par
+\tab\tab i. United States\par
+\tab\tab ii. Azure Government (US)\par
+\tab\tab iii. Canada\par
+\tab\tab iv. Brazil\par
+\tab\tab v. Mexico\par
+\tab c. While creating a VM in Azure, we need to select a region like:\par
+\tab\tab i. (US) East US\par
+\tab\tab ii. (Asia Pacific)\par
+\tab\tab iii. (Europe)\par
 \par
+\cf3\b\fs32 3. What is a Paired Region?\cf0\b0\fs22\par
+\tab a. Each region is paired with another region 300 miles away.\par
+\tab b. Only one region is updated at a time to ensure no outages.\par
+\tab c. \cf1\b Disaster Recovery \cf0\b0 is the Azure Service that use paired regions.\par
+\tab d. \cf1\b Azure Geo-Reduntant Storage (GRS) \cf0\b0 replicates data to secondary \tab region automatically, ensuring that data is durable even if the primary \tab region is not recovarable.\par
+\tab e. Example:\par
+\tab\tab i. Canada (Primary - Canada Central) (Secondary - Canada East)\par
+\tab\tab ii. North America (Primary - East US) (Secondary - West US)\par
 \par
+\cf3\b\fs32 4. Does all azure cloud services available in every Region?\cf0\b0\fs22\par
+Not all services are available in every region\par
 \par
+\cf3\b\fs32 5. What is a Recommended Region?\cf0\b0\fs22\par
+\tab a. A region that provides broad range of services.\par
+\tab b. The majority services are available in this region.\par
+\tab c. \cf1\b designed to support Avalability Zones\cf0\b0  now or in the future.\par
 \par
+\cf3\b\fs32 6. What is a Alrenate (Other) Region?\cf0\b0\fs22\par
+\tab a. A region that extends Azure footprints within a data residency \tab\tab boundary where a recommended region also exists. \par
+\tab b. Not designed to support \cf1\b Availability Zones.\par
+\tab\cf0\b0 c. These regions are labeled as \cf1\b Other \cf0\b0 in Azure Portal.\par
 \par
+\cf3\b\fs32 7. What is a General Availability?\cf0\b0\fs22\par
+\tab a. Is when a service is considered ready to be used publicly by everyone.\par
+\tab b. There are 3 type of Azure Cloud services:\par
+\tab\cf1\b\tab i. Foundational\cf0\b0\par
+\tab\tab\tab Available immediately or in 12 months in Recommended & \tab\tab\tab Alternate regions once GA is announced.\par
+\tab\tab\cf1\b ii. Mainstream\cf0\b0\par
+\tab\tab\tab Available immediately or in 12 months in Recommended \tab\tab\tab\tab Regions but may become available in Alternate Regions \tab\tab\tab\tab based on customer demand.\par
+\tab\tab\cf1\b iii. Specialized\cf0\b0\par
+\tab\tab\tab Available in Recommended & Alternate Regions on customer \tab\tab\tab demands.\par
+\par
+\cf3\b\fs32 8. What are Special Regions in Azure?\par
+\cf0\b0\fs22 Azure has special regions to meet Compliance or Legal reasons. Examples:\par
+\tab a. US DoD Central\par
+\tab b. US GOv Virginia\par
+\tab c. US GoV Iowa\par
+\tab d. 3 other secret locations of US Gov.\par
+\tab e. China East & China North (Partnership with chinese company 21Vianet)\par
+\par
+\cf3\b\fs32 9. What are Availability Zones in Azure?\cf0\b0\fs22\par
+\tab a. It is a physical location made up of one or more datacenter.\par
+\tab b. A datacentre is a secured building that contains thousands of PCs.\par
+\tab c. A region generally contain \cf1\b 3 Availability Zones.\cf0\b0\par
+\tab d. Datacentres within a region will be isolated from each other (different \tab buildings) but close enough to provide low latency.\par
+\tab e. Common practice to run workloads in \cf1\b at least three AZs \cf0\b0 to ensure \tab high availability in case 1 or 2 datacentres fail.\par
+\par
+\cf3\b\fs32 10. What are AZ supported regions in Azure?\cf0\b0\fs22\par
+\tab a. Not every region has support for Availability Zones.\par
+\tab b. These regions are called \cf1\b Alternate \cf0\b0 or \cf1\b Other \cf0\b0 regions.\par
+\tab c. Recommended regions are supposed to have at least 3 AZs.\par
+\tab d. Example regions having minimum 3 AZs:\par
+\tab\tab i. Central US\par
+\tab\tab ii. East US 2\par
+\tab\tab iii. West US 2\par
+\tab\tab iv. West Europe\par
+\tab\tab v. France Central\par
+\tab\tab vi. North Europe\par
+\tab\tab vii. Southeast Asia\par
+\tab e. For regions that don't have AZs select \cf1\b "No infrastructure \tab redundency required" \cf0\b0 in Azure Portal.\par
+\par
+\cf3\b\fs32 11. What are Fault and Update Domains in Azure?\cf0\b0\fs22\par
+\tab a. \cf1\b Availability Zone \cf0 = \cf4 (Fault Domain)\cf0  + \cf5 (Update Domain)\b0\par
+\cf0\b\tab b. \cf1 Fault Domain\cf0\b0\par
+\tab\tab i. A logical grouping of hardware to avoid a single point of failure \tab\tab within an AZ. \par
+\tab\tab ii. Group of VMs that share a common power source and network \tab\tab switch.\par
+\tab c. \cf5\b Update Domain\cf0\b0\par
+\tab\tab i. Azure may need to apply updates to the hardware & oftware.\par
+\tab\tab ii. Update domains ensure that the resources donot go offline.\par
+\par
+\cf3\b\fs32 12. What are Availability Sets?\cf0\b0\fs22\par
+\tab a. A logical grouping that you can use in Azure to ensure that the VMs you \tab place in the Availability Sets are different fault/update domains to avoid \tab downtime.\cf5\par
+\cf0\par
 \par
 \par
 \par
